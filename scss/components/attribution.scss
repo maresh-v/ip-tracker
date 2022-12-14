@@ -1,0 +1,18 @@
+@use '../abstracts' as abs;
+
+.attribution{
+    z-index: 1;
+    width: fit-content;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 10px;
+    position: absolute;
+    font-family: DM Sans, sans-serif;
+    font-size: .75rem;
+    font-weight: 500;
+    background-color: abs.$white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 12px -3px hsl(0deg, 0%, 0%);
+}

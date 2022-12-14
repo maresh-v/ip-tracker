@@ -1,0 +1,23 @@
+{
+  "name": "ip-tracker",
+  "version": "1.0.0",
+  "description": "IP tracker",
+  "main": "index.js",
+  "scripts": {
+    "scss": "sass --watch scss/_main.scss css/style.css",
+    "postcss": "postcss css/style.css -d public"
+  },
+  "author": "Vít Mareš",
+  "license": "ISC",
+  "dependencies": {
+    "live-server": "^1.1.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.7",
+    "node-sass": "^7.0.1",
+    "postcss": "^8.4.20",
+    "postcss-cli": "^10.1.0",
+    "postcss-minify": "^1.1.0",
+    "sass": "^1.53.0"
+  }
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable = no">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/m-icon.svg">
+  <link rel="stylesheet" href="public/style.css">
+  <script src="js/script.js" defer></script>
+  <script src="https://api.mapy.cz/loader.js"></script>
+  <script>Loader.lang = "en"; Loader.load()</script>
+  <title>Maresh.cz | IP Tracker</title>
+</head>
+
+<body class="address-tracker">
+
+  <section class="address-tracker__header">
+
+    <h1>IP Address Tracker</h1>
+
+    <div class="address-tracker__input">
+      <input type="text" class="" data-ip-tracker-role="search-field" placeholder="Search for any IP address or domain">
+
+      <button class="" data-ip-tracker-role="search-button"></button>
+    </div>
+
+    <div class="address-tracker__output">
+
+      <div class="address-tracker__output-section">
+        <h2>IP ADDRESS</h2>
+        <p data-ip-tracker-role="output-ip"></p>
+      </div>
+
+      <div>
+        <h2>LOCATION</h2>
+        <p data-ip-tracker-role="output-location"></p>
+      </div>
+
+      <div>
+        <h2>TIMEZONE</h2>
+        <p data-ip-tracker-role="output-timezone"></p>
+      </div>
+
+      <div>
+        <h2>ISP</h2>
+        <p data-ip-tracker-role="output-provider"></p>
+      </div>
+
+    </div>
+
+  </section>
+  <div class="address-tracker__map" data-ip-tracker-role="map"></div>
+
+  <p class="attribution">Design by <a href="https://www.frontendmentor.io/challenges/ip-address-tracker-I8-0yYAH0" target="_blank">Frontend Mentor</a>, coded by <a href="https://www.frontendmentor.io/challenges/ip-address-tracker-I8-0yYAH0">Maresh</a>.</p>
+</body>
+
+</html>

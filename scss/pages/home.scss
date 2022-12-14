@@ -1,0 +1,214 @@
+@use '../abstracts' as abs;
+
+.address-tracker{
+    font-family: 'DM Sans', sans-serif;
+    min-width: 310px;
+    position: relative;
+
+    &__header{
+        height: 280px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-image: url(../images/pattern-bg.png);
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        overflow: visible;
+        box-shadow: 15px 15px 27px -22px hsl(0deg, 0%, 0%);
+        z-index: 2;
+
+        @include abs.xs{
+            height: 300px;
+        }
+
+        h1{
+            color: abs.$white;
+            font-size: 1.9em;
+            padding: 0.125em 0 0.375em 0;
+
+            @include abs.xs{
+                font-size: 1.65em;
+            }
+        }
+    }
+
+    &__input{
+        height: 58px;
+        width: 550px;
+        display: flex;
+        box-shadow: 10px 10px 27px -22px abs.$black;
+
+        @include abs.xs{
+            width: 90%;
+            min-width: 90%;
+        }
+        
+        input{
+            flex-basis: 90%;
+            height: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            border-radius: 1em 0 0 1em;
+            border: none;
+            color: abs.$dark-grey;
+            letter-spacing: 1px;
+            font-family: inherit;
+
+            &:focus{
+                outline: none;
+            }
+        }
+
+        button{
+            flex-basis: 10%;
+            height: 100%;
+            aspect-ratio: 1 / 1;
+            border-radius: 0 1em 1em 0;
+            border: none;
+            background-color: abs.$black;
+            background-image: url(../images/icon-arrow.svg);
+            background-size: 20%;
+            background-repeat: no-repeat;
+            background-position: center;
+            cursor: pointer;
+            transition: .1s all;
+
+            &:hover{
+                background-color: abs.$dark-grey;
+            }
+        }
+    }
+
+    &__output{
+        display: flex;
+        position: absolute;
+        z-index: 2;
+        top: 200px;
+        flex-direction: row;
+        width: 1100px;
+        height: 160px;
+        background-color: abs.$white;
+        border-radius: 1em;
+        box-shadow: 10px 10px 27px -22px abs.$black;
+
+        @include abs.md{
+            width: calc(100vw - 30px);
+            height: auto;
+            min-height: 14.5vw;
+            top: calc(280px - 5.25vw);
+        }
+
+        @include abs.sm{
+            min-height: 32vw;
+            top: 195px;
+            flex-wrap: wrap;
+        }
+
+        @include abs.xs{
+            top: 165px;
+            min-height: 295px;
+            min-width: 90%;
+            flex-direction: column;
+            text-align: center;
+            padding: 6vw 6vw 3vw 6vw;
+            box-sizing: border-box;
+        }
+
+        div{
+            flex-basis: 25%;
+            padding: 2em;
+            position: relative;
+
+            @include abs.md{
+                padding: 2.8vw;
+            }
+
+            @include abs.sm{
+                flex-basis: 50%;
+                box-sizing: border-box;
+                padding: 3.8vw;
+            }
+
+            @include abs.xs{
+                margin-bottom: auto;
+                padding: 0 0 2vw 0;
+                
+                &:last-child{
+                    padding: 0;
+                }
+            }
+
+            h2{
+                color: abs.$grey;
+                font-size: .75em;
+                font-weight: 700;
+                letter-spacing: 1px;
+                margin: 0;
+
+                @include abs.md{
+                    font-size: 1.05vw;
+                }
+
+                @include abs.sm{
+                    font-size: 1.8vw;
+                }
+
+                @include abs.xs{
+                    font-size: max(2.5vw, .6rem)
+                }
+            }
+
+            p{
+                font-size: 1.5em;
+                font-weight: 700;
+                margin: .5em 0;
+
+                @include abs.md{
+                    font-size: 2.1vw;
+                }
+
+                @include abs.sm{
+                    font-size: 2.8vw;
+                }
+
+                @include abs.xs{
+                    font-size: max(5vw, 1.2rem);
+                    margin-top: .25em;
+                }
+            }
+
+            &:not(:last-child)::after{
+                content: "";
+                display: block;
+                width: 1px;
+                height: 50%;
+                background-color: abs.$grey;
+                position: absolute;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+            }
+
+            @include abs.sm{
+                &:nth-child(2)::after{
+                    display: none;
+                }
+            }
+
+            @include abs.xs{
+                &:not(:last-child)::after{
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__map{
+        @include abs.md{
+            min-height: 300px;
+        }
+    }
+}
+
