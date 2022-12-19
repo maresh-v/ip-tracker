@@ -111,7 +111,7 @@
             min-width: 90%;
             flex-direction: column;
             text-align: center;
-            padding: 6vw 6vw 3vw 6vw;
+            padding: max(6vw, 2rem) max(6vw, 2rem) max(3vw, 1rem) max(6vw, 2rem);
             box-sizing: border-box;
         }
 
@@ -132,7 +132,7 @@
 
             @include abs.xs{
                 margin-bottom: auto;
-                padding: 0 0 2vw 0;
+                padding: 0 0 max(2vw, 1rem) 0;
                 
                 &:last-child{
                     padding: 0;
@@ -155,7 +155,7 @@
                 }
 
                 @include abs.xs{
-                    font-size: max(2.5vw, .6rem)
+                    font-size: max(2.5vw, .6rem);
                 }
             }
 
@@ -174,7 +174,7 @@
 
                 @include abs.xs{
                     font-size: max(5vw, 1.2rem);
-                    margin-top: .25em;
+                    margin-top: max(.25vw, .1rem);
                 }
             }
 
